@@ -6,6 +6,9 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light justyfy-content-between mx-3"></nav>
+    <nav class="navbar navbar-light bg-light justyfy-content-between mx-3">
+      <a href="./index.php" class="navbar-brand">Travel LK</a>
+      <a href="./login.php" class="btn btn-success btn-sm">Login</a>
+    </nav>
   </body>
 </html>
