@@ -6,6 +6,6 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Welcome to Travel LK</h1>
+    <nav class="navbar navbar-light bg-light justyfy-content-between mx-3"></nav>
   </body>
 </html>
