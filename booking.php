@@ -16,15 +16,32 @@
       <form class="w-50 mx-auto mt-5" action="process.php" method="post">
 
         <div class="row">
-          <div class="col-md-6 form-group">
+          <div class="col-6 form-group">
             <label>Your Email: </label>
-            <input type="email" name="uemail" value="test@gmail.com">
+            <input type="email" name="uemail" value="test@gmail.com" class="form-control">
           </div>
 
-          <div class="form-group">
+          <div class="form-group col-6">
             <label>Hotel Name</label>
+            <select class="form-control" name="hotel">
+              <option disabled selected>Select an hotel</option>
+              <option value="Mahaweli Reach">Mahaweli Reach</option>
+              <option value="Earls Regent">Earls Regent</option>
+              <option value="Ganga addara">Ganga addara</option>
+            </select>
+          </div>
+        </div><br><br>
+
+        <div class="row">
+          <div class="form-group col-6">
+            <label>When you are coming?</label>
+            <input type="date" name="sdate" class="form-control">
           </div>
 
+          <div class="form-group col-6">
+            <label>When you plan to leave?</label>
+            <input type="date" name="edate" class="form-control">
+          </div>
         </div>
 
       </form>
