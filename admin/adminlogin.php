@@ -13,7 +13,7 @@
 
     <main class="my-5">
       <h2 class="text-center my-2">Loging as Admin</h2>
-      <form class="w-50 mx-auto mt-5" action="process.php" method="post">
+      <form class="w-50 mx-auto mt-5" action="../process.php" method="post">
         <div class="form-group">
           <label>Username</label>
           <input type="text" name="username" class="form-control" placeholder="Enter admin username..">

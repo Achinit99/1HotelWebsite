@@ -70,3 +70,20 @@ session_start();
 
       }
     } 
+
+    //admin login
+    if(isset($_POST['adminlogin'])){
+      //echo "Admin login";
+      $username = $_POST['username'];
+      $pw = $_POST['adminpw'];
+
+      $sql = "SELECT * FROM admin WHERE username = '$username' AND pw = '$pw'";
+      $res = mysqli_query(mysql: $con, query: $sql);
+
+      if(mysqli_num_rows(result: $res) > 0){
+        echo "Login admin success";
+      }else{
+        echo "failed to login";
+      }
+
+    }
