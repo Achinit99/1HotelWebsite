@@ -25,8 +25,15 @@
         </div><br>
 
         <div class="form-group">
-          <label>Gender</label>
-          <input type="text" name="ugender" class="form-control" placeholder="Enter gender..">
+          <label>Password</label>
+          <input type="password" name="upass" class="form-control" placeholder="Enter password..">
+        </div><br>
+
+        <div class="form-group">
+          <label>Gender</label><br>
+          <input type="radio" name="ugender" value="male">Male
+          <input type="radio" name="ugender" value="female">Female
+
         </div><br>
 
         <div class="form-group">
@@ -35,7 +42,7 @@
         </div><br>
 
         <button type="submit" class="btn btn-success" name="register">Register</button>
-        <a class="btn btn-secondary btn-sm" href="./register.php">Don't have an account? Register</a>
+        <a class="btn btn-secondary btn-sm" href="./login.php">Already have an account? Login</a>
 
 
       </form>
