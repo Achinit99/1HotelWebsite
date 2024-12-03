@@ -82,7 +82,9 @@ session_start();
 
       if(mysqli_num_rows(result: $res) > 0){
         echo "Login admin success";
+        header('location:admin/adashboard.php');
       }else{
+        header('location:admin/adminlogin.php');
         echo "failed to login";
       }
 
