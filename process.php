@@ -50,3 +50,24 @@ session_start();
         header('location:login.php');
       }
     }
+
+    // booking
+    if(isset($_POST['booking'])){
+      $uemail = $_POST['uemail'];
+      $hotelname = $_POST['hotel'];
+      $startdate = $_POST['sdate'];
+      $enddate = $_POST['edate'];
+
+      $sql = "INSERT INTO booking (uemail,hotel,startdate,enddate) VALUES ('$uemail', '$hotelname', '$startdate', '$enddate')";
+      $res = mysqli_query($con, $sql);
+
+      if($res){
+        echo "Booking added";
+        header('location:index.php');
+      }else{
+        echo "Failed to add booking";
+        header('location:booking.php');
+
+      }
+
+    }
