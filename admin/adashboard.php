@@ -1,3 +1,4 @@
+<?php include('../dbcon.php'); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,8 +31,34 @@
             <th>City</th>
             <th>Action</th>
           </thead>
-        </table>
 
+          <tbody>
+
+              <?php
+                  $sql = "SELECT * FROM user";
+                  $res = mysqli_query(mysql: $con, query: $sql);
+
+                  if(mysqli_num_rows(result: $res) > 0){
+                    while($row = mysqli_fetch_assoc(result: $res)){
+                    ?>
+                      <tr>
+                      <td><?php echo $row['id']; ?></td>
+                      <td><?php echo $row['name']; ?></td>
+                      <td><?php echo $row['email']; ?></td>
+                      <td><?php echo $row['gender']; ?></td>
+                      <td><?php echo $row['city']; ?></td>
+                      <td>
+                      <a href="./uedit.php" class="btn btn-success btn-sm">Edit</a>
+                        <a href="./udelete.php" class="btn btn-danger btn-sm">Delete</a>
+                      </td>
+                      </tr>
+                  <?php
+                    }
+                  }
+              ?>
+          </tbody>
+
+        </table>
       </div>
     </main>
 
