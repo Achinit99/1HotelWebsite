@@ -33,5 +33,20 @@ session_start();
 
     // user login
     if(isset($_POST['login'])){
-      echo "login success";
+      //echo "login success";
+
+      $uemail = $_POST['uemail'];
+      $upass = $_POST['upass'];
+
+      $sql = "SELECT * FROM user WHERE email='$uemail' AND pw='$upass';";
+      $res = mysqli_query(mysql: $con, query: $sql);
+
+      if(mysqli_num_rows(result: $res) > 0){
+        //echo "Login success";
+        $_SESSION['user'] = $uemail;
+        header('location:booking.php');
+      }else{
+        //echo "wrong credentials";
+        header('location:login.php');
+      }
     }
