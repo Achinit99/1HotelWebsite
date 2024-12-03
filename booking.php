@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,12 +20,12 @@
         <div class="row">
           <div class="col-6 form-group">
             <label>Your Email: </label>
-            <input type="email" name="uemail" value="test@gmail.com" class="form-control">
+            <input readonly type="email" name="uemail" value="<?php echo $_SESSION['user']; ?>" class="form-control  border-primary">
           </div>
 
           <div class="form-group col-6">
             <label>Hotel Name</label>
-            <select class="form-control" name="hotel">
+            <select class="form-control  border-primary" name="hotel">
               <option disabled selected>Select an hotel</option>
               <option value="Mahaweli Reach">Mahaweli Reach</option>
               <option value="Earls Regent">Earls Regent</option>
@@ -35,15 +37,16 @@
         <div class="row">
           <div class="form-group col-6">
             <label>When you are coming?</label>
-            <input type="date" name="sdate" class="form-control">
+            <input type="date" name="sdate" class="form-control border-primary">
           </div>
 
           <div class="form-group col-6">
             <label>When you plan to leave?</label>
-            <input type="date" name="edate" class="form-control">
+            <input type="date" name="edate" class="form-control border-primary">
           </div>
         </div>
 
+        <button type="submit" class="btn btn-warning mt-5" name="booking">Book Hotel</button>
       </form>
     </main>
 
