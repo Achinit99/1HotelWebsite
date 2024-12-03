@@ -69,5 +69,4 @@ session_start();
         header('location:booking.php');
 
       }
-
-    }
+    } 
