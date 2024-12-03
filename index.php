@@ -48,7 +48,7 @@
                   </div>
               </div>
 
-              
+
               <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
                      <img class="card-img-top" style="height:200px;" src="./img/hotel2.jpg" alt="Hotel img">
@@ -95,11 +95,16 @@
                   </div>
               </div>
             </div>
-
-
           
         </div>
       </div>
     </main>
+
+    <!-- footer section -->
+     <footer class="text-muted">
+      <p class="text-center">2024 &copy; Achini Thathsarani</p>
+     </footer>
+
+
   </body>
 </html>
