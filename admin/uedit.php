@@ -18,21 +18,25 @@
       $id=$_GET['id'];
       require '../dbcon.php';
       
-      
-      
-      
-      ?>
+      $sql = "SELECT * FROM user WHERE id='$id';";
+      $res = mysqli_query(mysql: $con, query: $sql);
+
+      if(mysqli_num_rows(result: $res) > 0){
+        //values found
+        $row = mysqli_fetch_assoc(result: $res);
+        //key : value
+        ?>
 
 
       <form class="w-50 mx-auto mt-5" action="../process.php" method="post">
         <div class="form-group">
           <label>Name</label>
-          <input type="text" name="uname" class="form-control" placeholder="Enter name..">
+          <input type="text" name="uname" class="form-control" value="<?php echo $row['name']; ?>">
         </div><br>
 
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" name="uemail" class="form-control" placeholder="Enter email..">
+          <input type="email" name="uemail" class="form-control">
         </div><br>
 
         <div class="form-group">
@@ -54,6 +58,11 @@
 
         <button type="submit" class="btn btn-success" name="aUserUpdate">Update User</button>
       </form>
+
+      <?php
+      }
+      
+      ?>
     </main>
 
     <!-- footer section -->
