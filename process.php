@@ -81,6 +81,7 @@ session_start();
       $res = mysqli_query(mysql: $con, query: $sql);
 
       if(mysqli_num_rows(result: $res) > 0){
+        $_SESSION['auser']=$username;
         echo "Login admin success";
         header('location:admin/adashboard.php');
       }else{

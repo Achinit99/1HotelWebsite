@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['auser'])){
+      header('location: adminlogin.php');
+    }
+?>
 <!DOCTYPE html>
 <html>
   <head>

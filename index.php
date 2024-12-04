@@ -8,7 +8,19 @@
   <body>
     <nav class="navbar navbar-light bg-light justyfy-content-between mx-3">
       <a href="./index.php" class="navbar-brand">Travel LK</a>
-      <a href="./login.php" class="btn btn-success btn-sm">Login</a>
+          <?php
+            session_start();
+
+            if(!isset($_SESSION['user'])){
+              ?>
+               <a href="./login.php" class="btn btn-success btn-sm">Login</a>
+               <?php
+            }else{
+              ?>
+              <a href="./logout.php" class="btn btn-warning btn-sm">Logout</a>
+              <?php
+            }
+           ?>
     </nav>
 
     <main class="my-5">

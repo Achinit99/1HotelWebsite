@@ -7,12 +7,11 @@
   </head>
   <body>
     <nav class="navbar navbar-light bg-light justyfy-content-between mx-3">
-      <a href="./index.php" class="navbar-brand">Travel LK</a>
-      <a href="./index.php" class="btn btn-warning btn-sm">Back to Home</a>
+      <a href="../index.php" class="navbar-brand">Travel LK</a>
     </nav>
 
     <main class="my-5">
-      <h2 class="text-center my-2">Loging as Admin</h2>
+      <h2 class="text-center my-2">Login as Admin</h2>
       <form class="w-50 mx-auto mt-5" action="../process.php" method="post">
         <div class="form-group">
           <label>Username</label>
