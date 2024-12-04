@@ -115,3 +115,26 @@ session_start();
       }
 
     }
+
+//update user
+if(isset($_POST['aUserUpdate'])){
+  //echo "Update clicked";
+  $id = $_POST['id'];
+  $uname = $_POST['uname'];
+  $uemail = $_POST['uemail'];
+  $upass = $_POST['upass'];
+  $ugender = $_POST['ugender'];
+  $ucity = $_POST['ucity'];
+
+  //query to update
+  $sql = "UPDATE user set name='$uname',email='$uemail',pw='$upass',gender='$ugender',city='$ucity' WHERE id='$id';";
+
+  $res=mysqli_query($con, $sql);
+
+  if($res){
+    echo "Update success";
+    header('location:./admin/adashboard.php');
+  }else{
+    echo "Failed to update";
+  }
+}

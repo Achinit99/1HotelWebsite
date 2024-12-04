@@ -29,6 +29,7 @@
 
 
       <form class="w-50 mx-auto mt-5" action="../process.php" method="post">
+        <input type="text" name="id" value="<?php echo $row['id']; ?>" hidden>
         <div class="form-group">
           <label>Name</label>
           <input type="text" name="uname" class="form-control" value="<?php echo $row['name']; ?>">
@@ -36,24 +37,26 @@
 
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" name="uemail" class="form-control">
+          <input type="email" name="uemail" class="form-control" value="<?php echo $row['email']; ?>">
         </div><br>
 
         <div class="form-group">
           <label>Password</label>
-          <input type="password" name="upass" class="form-control" placeholder="Enter password..">
+          <input type="text" name="upass" class="form-control" value="<?php echo $row['pw']; ?>">
         </div><br>
 
         <div class="form-group">
           <label>Gender</label><br>
           <input type="radio" name="ugender" value="male">Male
           <input type="radio" name="ugender" value="female">Female
+          <input type="radio" name="ugender" value="<?php echo $row['gender']; ?>">
+
 
         </div><br>
 
         <div class="form-group">
           <label>City</label>
-          <input type="text" name="ucity" class="form-control" placeholder="Enter city..">
+          <input type="text" name="ucity" class="form-control" value="<?php echo $row['city']; ?>">
         </div><br>
 
         <button type="submit" class="btn btn-success" name="aUserUpdate">Update User</button>
