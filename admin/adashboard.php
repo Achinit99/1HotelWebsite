@@ -48,8 +48,8 @@
                       <td><?php echo $row['gender']; ?></td>
                       <td><?php echo $row['city']; ?></td>
                       <td>
-                      <a href="./uedit.php" class="btn btn-success btn-sm">Edit</a>
-                        <a href="./udelete.php" class="btn btn-danger btn-sm">Delete</a>
+                      <a href="./uedit.php?id=<?php echo $row['id']; ?>" class="btn btn-success btn-sm">Edit</a>
+                        <a href="./udelete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
                       </td>
                       </tr>
                   <?php
