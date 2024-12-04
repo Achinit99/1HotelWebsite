@@ -19,7 +19,7 @@
         </div>
 
         <div class="container text-start">
-          <a href="#" class="btn btn-primary btn-sm mx-2">Add New User</a>
+          <a href="addNewUser.php" class="btn btn-primary btn-sm mx-2">Add New User</a>
         </div>
 
         <table class="table mt-2">
