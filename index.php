@@ -77,7 +77,7 @@
                               <button type="button" class="btn btn-outline-success btn-sm">Book Now</button>
 
                           </div>
-                          <small class="text-muted">Rs. 15000 per day</small>
+                          <small class="text-muted">Rs. 25000 per day</small>
                         </div>
                      </div>
 
@@ -100,7 +100,7 @@
                               <button type="button" class="btn btn-outline-success btn-sm">Book Now</button>
 
                           </div>
-                          <small class="text-muted">Rs. 15000 per day</small>
+                          <small class="text-muted">Rs. 35000 per day</small>
                         </div>
                      </div>
 
